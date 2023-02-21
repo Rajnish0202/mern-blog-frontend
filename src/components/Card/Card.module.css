@@ -1,0 +1,14 @@
+.card {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin-bottom: 2rem;
+  transition: all 0.5s linear;
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 1rem 0.5rem;
+  }
+}

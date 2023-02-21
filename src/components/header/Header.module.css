@@ -1,0 +1,182 @@
+.header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+.bars {
+  display: none;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  background: #fff;
+  padding: 0.5rem 5rem;
+  align-items: center;
+}
+
+.searchToggle {
+  display: none;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft a {
+  color: #000;
+}
+
+.headerLeft a:hover {
+  color: rgb(192, 245, 245);
+  transition: all 0.5s;
+}
+
+.userLink {
+  display: flex;
+  align-items: center;
+}
+
+.userLink span {
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.userLink span img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.userLink b {
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.5s;
+}
+
+.listItem a {
+  color: #000;
+  font-size: 18px;
+  font-family: 'Itim', cursive;
+}
+
+.listItem a:hover {
+  color: rgb(192, 245, 245);
+  transition: all 0.5s;
+}
+
+.logout {
+  font-family: 'Itim', cursive;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+  .bars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 90%;
+    left: -100%;
+    grid-template-columns: 1fr;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 0%;
+    margin: 0.5rem 0;
+    background: #fff;
+    padding: 1rem;
+    transition: all 0.8s ease-in-out;
+  }
+
+  .navbar.active {
+    left: 0;
+    width: 100%;
+  }
+
+  .searchToggle {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+  }
+
+  .headerCenter {
+    margin: 1rem 0;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list li {
+    background: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .list li a,
+  .list li button {
+    color: #fff;
+    margin: 0;
+  }
+
+  .responsive {
+    position: absolute;
+    top: -0.5rem;
+    left: 85%;
+    background: none;
+    overflow-x: hidden;
+    width: 6rem;
+    background: none !important;
+  }
+
+  .listItem div {
+    display: none;
+  }
+
+  .userLink span {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headerRight .listItem:first-child {
+    left: 74%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .headerRight .listItem:first-child {
+    left: 65%;
+  }
+}
