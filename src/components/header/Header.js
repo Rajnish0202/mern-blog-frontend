@@ -63,34 +63,46 @@ const Header = ({
         </div>
         <div className={styles.headerCenter}>
           <ul className={styles.list}>
-            <li className={styles.listItem} onClick={navHandler}>
-              <Link to='/'>Home</Link>
-            </li>
-            <li className={styles.listItem} onClick={navHandler}>
-              <Link to='/myblog'>MyBlog</Link>
-            </li>
-            <li className={styles.listItem} onClick={navHandler}>
-              <Link to='/writeblog'>Write</Link>
-            </li>
-            <li className={styles.listItem} onClick={navHandler}>
-              <Link to='/about'>About</Link>
-            </li>
+            <Link to='/'>
+              <li className={styles.listItem} onClick={navHandler}>
+                Home
+              </li>
+            </Link>
+            <Link to='/myblog'>
+              <li className={styles.listItem} onClick={navHandler}>
+                MyBlog
+              </li>
+            </Link>
+            <Link to='/writeblog'>
+              <li className={styles.listItem} onClick={navHandler}>
+                Write
+              </li>
+            </Link>
+            <Link to='/about'>
+              <li className={styles.listItem} onClick={navHandler}>
+                About
+              </li>
+            </Link>
           </ul>
         </div>
         <div className={styles.headerRight}>
           {!isLoggedIn ? (
             <ul className={styles.list}>
-              <li className={styles.listItem} onClick={navHandler}>
-                <Link to='/login'>Login</Link>
-              </li>
-              <li className={styles.listItem} onClick={navHandler}>
-                <Link to='/register'>Register</Link>
-              </li>
+              <Link to='/login'>
+                <li className={styles.listItem} onClick={navHandler}>
+                  Login
+                </li>
+              </Link>
+              <Link to='/register'>
+                <li className={styles.listItem} onClick={navHandler}>
+                  Register
+                </li>
+              </Link>
             </ul>
           ) : (
             <ul className={styles.list}>
-              <li className={`${styles.listItem} ${styles.responsive}`}>
-                <Link to='/profile' className={styles.userLink}>
+              <Link to='/profile' className={styles.userLink}>
+                <li className={`${styles.listItem} ${styles.responsive}`}>
                   <span onClick={() => setNavToggle(!navToggle)}>
                     <img
                       src={user?.avataar?.url}
@@ -101,16 +113,16 @@ const Header = ({
                   <div title={user?.name}>
                     {capitalizeText(user?.name).split(' ')[0]}
                   </div>
-                </Link>
-              </li>
-              <li className={styles.listItem} onClick={navHandler}>
-                <button
-                  className={`${styles.logout} --btn`}
-                  onClick={logoutHandler}
-                >
+                </li>
+              </Link>
+              <button
+                className={`${styles.logout} --btn`}
+                onClick={logoutHandler}
+              >
+                <li className={styles.listItem} onClick={navHandler}>
                   Logout
-                </button>
-              </li>
+                </li>
+              </button>
             </ul>
           )}
         </div>

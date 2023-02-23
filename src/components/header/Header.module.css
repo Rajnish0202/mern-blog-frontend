@@ -38,7 +38,7 @@
   transition: all 0.5s;
 }
 
-.userLink {
+.userLink .listItem {
   display: flex;
   align-items: center;
 }
@@ -71,13 +71,13 @@
   transition: all 0.5s;
 }
 
-.listItem a {
+.list a {
   color: #000;
   font-size: 18px;
   font-family: 'Itim', cursive;
 }
 
-.listItem a:hover {
+.list a:hover {
   color: rgb(192, 245, 245);
   transition: all 0.5s;
 }
@@ -135,7 +135,8 @@
     align-items: flex-start;
   }
 
-  .list li {
+  .list a,
+  .list button {
     background: rgba(0, 0, 0, 0.25);
     width: 100%;
     padding: 0.5rem 1rem;
@@ -143,19 +144,25 @@
     border-bottom-right-radius: 10px;
   }
 
-  .list li a,
-  .list li button {
+  .list a,
+  .list button {
     color: #fff;
     margin: 0;
   }
 
-  .responsive {
+  .logout {
+    justify-content: flex-start;
+  }
+
+  .userLink {
     position: absolute;
     top: -0.5rem;
-    left: 85%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     background: none;
     overflow-x: hidden;
-    width: 6rem;
     background: none !important;
   }
 
@@ -166,17 +173,5 @@
   .userLink span {
     width: 4rem;
     height: 4rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .headerRight .listItem:first-child {
-    left: 74%;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .headerRight .listItem:first-child {
-    left: 65%;
   }
 }
