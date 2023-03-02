@@ -61,7 +61,7 @@ const UserProfile = () => {
               ></div>
             </div>
             <Link
-              to={`/profile/${user?._id}`}
+              to={`/updateprofile`}
               className='--btn --btn-primary'
               style={{ width: '20rem', margin: 'auto' }}
             >

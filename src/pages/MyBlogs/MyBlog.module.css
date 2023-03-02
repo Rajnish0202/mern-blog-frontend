@@ -58,4 +58,16 @@
     grid-template-columns: 1fr;
     padding: 1rem;
   }
+
+  .writeBlog {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .writeBlog {
+    width: 95%;
+    padding: 1rem;
+  }
 }
